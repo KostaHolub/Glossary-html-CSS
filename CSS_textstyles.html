@@ -1,0 +1,491 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<link rel="stylesheet" href="CSS/style.css">
+	<title>CSS стилизация текста</title>
+</head>
+<body>
+	<h1><span>CSS свойства и правописание</span></h1>
+
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+	<h2><span>Свойства шрифта и текста</span></h2>
+	<div>
+		<p>CSS свойства для оформления текста, которые применяются наиболее часто.</p>
+	</div>
+	<h3><span>Свойства шрифта</span></h3>
+	<div>
+		<table class="Tabl_body">
+			<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">font-family: "Имя шрифта", "Имя шрифта", тип шрифта</span></td>
+				<td class="Table_datacell">Устанавливает семейство шрифта<br>
+Типы шрифта:
+<br><span class="accent_text">serif</span> — шрифты с засечками (антиквенные), типа Times;
+<br><span class="accent_text">sans-serif</span> — рубленные шрифты (шрифты без засечек или гротески), типичный представитель — Arial;
+<br><span class="accent_text">cursive</span> — курсивные шрифты;
+<br><span class="accent_text">fantasy</span> — декоративные шрифты;
+<br><span class="accent_text">monospace</span> — моноширинные шрифты, ширина каждого символа в таком семействе одинакова (шрифт Courier).
+</td>
+			</tr>
+			<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">font-size: 14px;</span></td>
+				<td class="Table_datacell">Определяет размер шрифта элемента.</td>
+			</tr>
+			<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">font-style:</span></td>
+				<td class="Table_datacell">Определяет начертание шрифта — обычное, курсивное или наклонное<div class="br"></div>
+<span class="accent_text">normal</span> - Обычное начертание текста.
+<br><span class="accent_text">italic</span> - Курсивное начертание. 
+<br><span class="accent_text">oblique</span> - Наклонное начертание. Курсив и наклонный шрифт при всей их похожести не одно и то же. Курсив это специальный шрифт имитирующий рукописный, наклонный же образуется путем наклона обычных знаков вправо.
+</td>
+			</tr>
+			<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">font-weight:</span></td>
+				<td class="Table_datacell">Устанавливает насыщенность шрифта.
+<br><span class="accent_text">100</span> - thin
+<br><span class="accent_text">300</span> - lite
+<br><span class="accent_text">400</span> - normal
+<br><span class="accent_text">500</span> - medium
+<br><span class="accent_text">600</span> - semibold
+<br><span class="accent_text">700</span> - bold
+<br><span class="accent_text">900</span> - black
+</td>
+			</tr>
+		</table>
+<h3><span>Свойства текста</span></h3>
+		<table class="Tabl_body">
+
+			<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">color:</span></td>
+				<td class="Table_datacell">Определяет цвет текста. Для задания цветов обычно используются числа в шестнадцатеричном коде, либо с помощью RGB.</td>
+			</tr>
+			<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">text-align:</span></td>
+				<td class="Table_datacell">Определяет горизонтальное выравнивание текста в пределах элемента. 
+<br><span class="accent_text">center</span> - Выравнивание текста по центру.
+<br><span class="accent_text">justify</span> - Выравнивание по ширине, что означает одновременное выравнивание по левому и правому краю. Чтобы произвести это действие браузер в этом случае добавляет пробелы между словами.
+<br><span class="accent_text">left</span> - Выравнивание текста по левому краю. 
+<br><span class="accent_text">right</span> - Выравнивание текста по правому краю.
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">text-decoration:</span></td>
+				<td class="Table_datacell">Добавляет оформление текста в виде его подчеркивания, перечеркивания, линии над текстом и мигания. 
+Одновременно можно применить более одного стиля, перечисляя значения через пробел. Это свойство наследуется и может принимать значения:
+<br><span class="accent_text">line-through</span> - Создает перечеркнутый текст.
+<br><span class="accent_text">overline</span> - Линия проходит над текстом.
+<br><span class="accent_text">underline</span> - Устанавливает подчеркнутый текст. 
+<br><span class="accent_text">none</span> - Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию.
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">text-shadow: горизонтальное_смещение вертикальное_смещение размер цвет;</span></td>
+				<td class="Table_datacell">Добавляет тень к тексту.
+Пример text-shadow: 1px 1px 1px #000;
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">text-transform:</span></td>
+				<td class="Table_datacell">Управляет преобразованием текста в заглавные или прописные символы.
+<br><span class="accent_text">capitalize</span>  - Первый символ каждого слова в предложении будет заглавным. Остальные символы свой вид не меняют.
+<br><span class="accent_text">lowercase</span> - Все символы текста становятся строчными (нижний регистр). 
+<br><span class="accent_text">uppercase</span> - Все символы текста становятся прописными (верхний регистр).
+<br><span class="accent_text">none</span> - Не меняет регистр символов.
+</td>
+			</tr>
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">text-indent:</span></td>
+				<td class="Table_datacell">Устанавливает величину отступа первой строки блока текста. При меняется, если нам нужно создать что-то типа красной строки.</td>
+			</tr>
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">letter-spacing:</span></td>
+				<td class="Table_datacell">Определяет интервал между символами (буквами). Используется когда нужно разрядить текст.</td>
+			</tr>
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">line-height:</span></td>
+				<td class="Table_datacell">Устанавливает межстрочный интервал текста. Широко применяется при верстке текста.</td>
+			</tr>
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">white-space:</span></td>
+				<td class="Table_datacell">Управляет свойствами пробелов между словами. Применяется в основном со значением 
+nowrap которое запрещает перенос строки. Таким образом весь текст отображается в одну строку и не ломается. Значение normal вернет все как было.
+</td>
+
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">word-spacing:</span></td>
+				<td class="Table_datacell">Устанавливает интервал между словами.</td>
+			</tr>
+		</table>
+	<h2><span>Свойства блоков</span></h2>
+
+		<table class="Tabl_body">		
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">box-sizing</span></td>
+				<td class="Table_datacell">Применяется для изменения алгоритма расчета ширины и высоты элемента. 
+Свойство наследуется? Или не наследуется? Часто прописыватся в конструкции "* {box-sizing: border-box;} "
+<br><span class="accent_text">content-box</span> - При указанном width=100px общий размер будет блока будет 100+паддинг*2+бордер*2 Базовое для стандартного CSS, при этом свойства width и height задают ширину и высоту контента и не включают в себя значения отступов, полей и границ.
+<br><span class="accent_text">border-box</span> - При указанном width=100px размер контента будет 100-паддинг*2-бордер*2. Свойства width и height включают в себя значения полей и границ, но не отступов (margin). Эта модель используется браузером Internet Exporer в режиме несовместимости.
+<br><span class="accent_text">padding-box</span> - Свойства width и height включают в себя значения полей, но не отступов (margin) и границ (border).
+</td>
+			</tr>
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">padding:</span></td>
+				<td class="Table_datacell">Внутренний отступ элемента
+<br>При указании поля в процентах, значение считается от ширины родителя элемента.
+<br>Свойство не наследуется.
+
+<br>padding: со_всех_сторон;
+<br>padding: сверху справа снизу слева;
+<br>padding: сверху_снизу справа_слева;
+<br>padding: сверху справа_слева снизу;
+<br>Отступ сверху и снизу не действует на срочные теги
+</td>
+			</tr>
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">margin:</span></td>
+				<td class="Table_datacell">Внешний отступ элемента
+<br>При указании поля в процентах, значение считается от ширины родителя элемента.
+<br>Свойство не наследуется.
+<br>Значение может быть как положительным, так и отрицательным числом.
+
+<br>margin: со_всех_сторон;
+<br>margin: сверху справа снизу слева;
+<br>margin: сверху_снизу справа_слева;
+<br>margin: сверху справа_слева снизу;
+
+<br>Отступ сверху и снизу не действует на срочные теги
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">width:</span></td>
+				<td class="Table_datacell">Устанавливает ширину блочных тегов и некоторых строчных (например <span class="tag">img</span>)
+<br>Свойство не наследуется.
+<br>width:100px;
+<br>width:10%;
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">max-width:</span></td>
+				<td class="Table_datacell">Устанавливает максимальную ширину блочных тегов и некоторых строчных (например <span class="tag">img</span>)</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">min-width:</span></td>
+				<td class="Table_datacell">Устанавливает минимальную ширину блочных тегов и некоторых строчных (например <span class="tag">img</span>)</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">height:</span></td>
+				<td class="Table_datacell">Устанавливает высоту блочных тегов и некоторых строчных (например <span class="tag">img</span>)
+<br>Свойство не наследуется.
+<br>height:100px;
+<br>height:10%;
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">min-height:</span></td>
+				<td class="Table_datacell">Свойство не наследуется.</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">max-height:</span></td>
+				<td class="Table_datacell">Свойство не наследуется.</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">overflow:</span></td>
+				<td class="Table_datacell">Управляет отображением содержания блочного элемента
+<br><span class="accent_text">visible</span> - Отображается все содержание элемента, даже за пределами установленной высоты и ширины. 
+<br><span class="accent_text">hidden</span> - Отображается только область внутри элемента, остальное будет скрыто.
+<br><span class="accent_text">scroll</span> - Всегда добавляются полосы прокрутки.
+<br><span class="accent_text">auto</span> - Полосы прокрутки добавляются только при необходимости.
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">display:</span></td>
+				<td class="Table_datacell">Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.
+<br>Свойство не наследуется.
+<br><span class="accent_text">block</span> - Элемент показывается как блочный. Применение этого значения для встроенных элементов, например тега &lt;span&gt;, заставляет его вести подобно блокам — происходит перенос строк в начале и в конце содержимого. 						
+<br><span class="accent_text">inline</span> - Элемент отображается как встроенный. Использование блочных тегов, таких как &lt;div&gt; и &lt;p&gt;, автоматически создает перенос и показывает содержимое этих тегов с новой строки. Значение inline отменяет эту особенность, поэтому содержимое блочных элементов начинается с того места, где окончился предыдущий элемент.
+<br><span class="accent_text">inline-block</span> - Это значение генерирует блочный элемент, который обтекается другими элементами веб-страницы подобно встроенному элементу. Фактически такой элемент по своему действию похож на встраиваемые элементы (вроде тега &lt;img&gt;). При этом его внутренняя часть форматируется как блочный элемент, а сам элемент — как встроенный. 											
+<br><span class="accent_text">none</span> - Временно удаляет элемент из документа. Занимаемое им место не резервируется и веб-страница формируется так, словно элемента и не было.
+</td>
+			</tr>
+					</table>
+
+	<h2><span>Декор блоков</span></h2>
+
+		<table class="Tabl_body">					
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">border:</span></td>
+				<td class="Table_datacell">Универсальное свойство border позволяет одновременно установить толщину, 
+стиль и цвет границы вокруг элемента.
+<br>border: 1px solid #000; (размер стиль цвет)
+<br>Основные стили -solid dotted dashed
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">border-radius:</span></td>
+				<td class="Table_datacell">Устанавливает радиус скругления уголков блока.
+<br>border-radius:50%; - круг
+<br>Можно использовать вместе с overflow: hidden;
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">outline:</span></td>
+				<td class="Table_datacell">Универсальное свойство, одновременно устанавливающее цвет, 
+стиль и толщину внешней границы на всех четырех сторонах элемента. 
+<br>В отличие от линии, задаваемой через border, свойство outline 
+не влияет на положение блока и его ширину. 
+<br>Также нельзя задать параметры линии на отдельных сторонах элемента, 
+outline применяется сразу ко всем четырём сторонам.
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">box-shadow: сдвиг_по_гориз сдвиг_по_верт радиус расстояние</span></td>
+				<td class="Table_datacell">Добавляет тень к элементу.
+
+<br>Можно добавить много теней. На тень влияет свойство border-radius.
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">opacity:</span></td>
+				<td class="Table_datacell">Определяет уровень прозрачности элемента.
+<br>Отличие opacity:0; от display:none; в том что блок не убирается из верстки а только становиться прозрачным, то есть занимаемое им место остается. Так же, с прозрачными элементами все еще можно взаимодействовать, например, кликать по ссылкам.
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">Visibility:</span></td>
+				<td class="Table_datacell">Предназначен для отображения или скрытия элемента.
+<br>Отличие visibility: hidden; от display:none; в том что блок не убирается из верстки а только скрывается, то есть занимаемое им место остается.
+<br>Отличие visibility: hidden; от opacity:0; в том, что блок скрывается и взаимодействовать с ним нельзя.
+</td>
+			</tr>
+
+					</table>
+
+	<h2><span>Фон, бекграунд</span></h2>
+
+		<table class="Tabl_body">
+
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background:</span></td>
+				<td class="Table_datacell">Универсальное свойство background позволяет установить одновременно несколько характеристик фона а именно:</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background-color:</span></td>
+				<td class="Table_datacell">Определяет цвет фона элемента.</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background:linear-gradient(to top, #fefcea, #f1da36);</span></td>
+				<td class="Table_datacell">Так же значением свойства можно указать градиент:
+линейный:
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background:radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);</span></td>
+				<td class="Table_datacell">радиальный: 
+
+Подробнее о градиентах:
+<a href="http://htmlbook.ru/css3-na-primerakh/lineinyi-gradient">http://htmlbook.ru/css3-na-primerakh/lineinyi-gradient</a> Инструмент создания готового кода градиента:
+<a href="https://www.colorzilla.com/gradient-editor">https://www.colorzilla.com/gradient-editor/</a>
+</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background-position:</span></td>
+				<td class="Table_datacell">Задает начальное положение фонового изображения, установленного с помощью свойства background-image.</td>
+			</tr>
+						<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background-repeat:</span></td>
+				<td class="Table_datacell">Определяет, как будет повторяться фоновое изображение, установленное с помощью свойства background-image.
+<br><span class="accent_text">no-repeat</span> -  Устанавливает одно фоновое изображение в элементе без его повторений, положение которого определяется свойством background-position (по умолчанию в левом верхнем углу). Аналогично no-repeat no-repeat.
+<br><span class="accent_text">repeat</span> - Фоновое изображение повторяется по горизонтали и вертикали. Аналогично repeat repeat.
+<br><span class="accent_text">repeat-x</span> - Фоновый рисунок повторяется только по горизонтали. Аналогично repeat no-repeat.
+<br><span class="accent_text">repeat-y</span> - Фоновый рисунок повторяется только по вертикали. Аналогично no-repeat repeat.
+<br><span class="accent_text">inherit</span> -Наследует значение родителя.
+<br><span class="accent_text">space</span> - Изображение повторяется столько раз, чтобы полностью заполнить область; если это не удаётся, между картинками добавляется пустое пространство.
+<br><span class="accent_text">round</span> - Изображение повторяется так, чтобы в области поместилось целое число рисунков; если это не удаётся сделать, то фоновые рисунки масштабируются.
+</td>
+			</tr>
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background-attachment:</span></td>
+				<td class="Table_datacell">Устанавливает, будет ли прокручиваться фоновое изображение вместе с содержимым элемента.
+<br><span class="accent_text">fixed</span> - Делает фоновое изображение элемента неподвижным. 
+<br><span class="accent_text">scroll</span> - Позволяет перемещаться фону вместе с содержимым.
+<br><span class="accent_text">inherit</span> - Наследует значение родителя.
+<br><span class="accent_text">local</span> - Фон фиксируется с учётом поведения элемента. Если элемент имеет прокрутку, то фон будет прокручиваться вместе с содержимым, но фон выходящий за рамки элемента остаётся на месте.
+</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">background-size:</span></td>
+				<td class="Table_datacell">Масштабирует фоновое изображение согласно заданным размерам.
+<значение> - Задает размер в любых доступных для CSS единицах. 
+<проценты> - Задает размер фоновой картинки в процентах от ширины или высоты элемента. 
+<br><span class="accent_text">auto</span> - Если задано одновременно для ширины и высоты (auto auto), размеры фона остаются исходными; если только для одной стороны картинки (100px auto), то размер вычисляется автоматически исходя из пропорций картинки.
+<br><span class="accent_text">cover</span> - Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.
+<br><span class="accent_text">contain</span> - Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока. 
+<br>Если установлено одно значение, оно задает ширину фона, второе значение принимается за auto. Пропорции картинки при этом сохраняются. Использование двух значений через пробел задает ширину и высоту фоновой картинки.
+</td>
+			</tr>				
+								<tr class="Table_row">
+				
+								<td colspan="2" class="Table_datacell">Свойство background позволяет задать несколько изображений через запятую, 
+причем со своими настройками позиционирования масштабирования и прокрутки
+</td>
+			</tr>
+
+					</table>
+
+	<h2><span>Псевдоклассы</span></h2>
+	<div><p>Синтаксис, то есть правило записи псевдоклассов прост, мы пишем селектор класса либо селектор типа ставим двоеточие, пишем тот или иной псевдосласс и уже после этого открываем фигурные скобки и пишем нужные CSS параметры:</p>
+	<span class="accent_text">Селектор:Псевдокласс { параметры стиля }</span>
+	</div>
+
+		<table class="Tabl_body">							
+								<tr class="Table_row">
+				<td colspan="2" class="Table_datacell">псевдоклассы состояния</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:hover</span></td>
+				<td class="Table_datacell">Срабатывает при наведении на элемент, часто применяется как для ссылок так и для любого другого элемента.</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:active</span></td>
+				<td class="Table_datacell">Срабатывает при нажатии на элемент. В основном применяется к ссылкам и кнопкам.</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:visited</span></td>
+				<td class="Table_datacell">Срабатывает для посещенных ссылок</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:focus</span></td>
+				<td class="Table_datacell">Срабатывает при получении элементом фокуса. Часто применяется к элементам форм. Например инпутам.</td>
+			</tr>				
+								<tr class="Table_row">
+				<td colspan="2" class="Table_datacell">псевдоклассы положения в коде</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:first-child</span></td>
+				<td class="Table_datacell">Обращение к первому элементу в блоке</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:last-child</span></td>
+				<td class="Table_datacell">Обращение к последнему элементу в блоке</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:nth-child <br>(порядковый номер элемента)</span></td>
+				<td class="Table_datacell">Обращение к конкретным элементам в блоке
+<br><span class="accent_text">odd</span> - Обращается к элементам с нечётными номерами
+<br><span class="accent_text">even</span> - Обращается к элементам с чётными номерам
+</td>
+			</tr>	
+
+					</table>
+
+	<h2><span>Псевдоэлементы</span></h2>
+<div>
+	<p>это селекторы, которые определяют область элементов, которая изначально отсутствует в дереве документа. Эта область создается искусственно с помощью CSS.
+<span class="accent_text">Селектор:Псевдоэлемент { параметры стиля }</span>
+</p>
+</div>
+		<table class="Tabl_body">
+
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:first-line</span></td>
+				<td class="Table_datacell">задает стиль первой строки форматированного текста. 
+Длина этой строки зависит от многих факторов, таких как используемый шрифт, размер окна браузера, ширина блока, языка и т.д. В правилах стиля допустимо использовать только свойства, относящиеся к шрифту, изменению цвета текста и фона.
+</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:first-letter</span></td>
+				<td class="Table_datacell">определяет стиль первого символа в тексте элемента, 
+к которому добавляется. К этому псевдоэлементу могут применяться только стилевые свойства, связанные со свойствами шрифта, полями, отступами, границами, цветом и фоном.
+</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:before</span></td>
+				<td class="Table_datacell">применяется для отображения желаемого контента до содержимого элемента, к которому он добавляется. Работает совместно со свойством content. 
+
+При добавлении :before к блочному элементу, значение свойства display может быть только: block, inline, none, list-item. 
+Все остальные значения будут трактоваться как block.
+При добавлении :before к строчному элементу, display ограничен значениями inline и none. 
+Все остальные будут восприниматься как inline.
+</td>
+			</tr>				
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">:after</span></td>
+				<td class="Table_datacell">Псевдоэлемент, который используется для вывода желаемого текста после содержимого элемента, 
+к которому он добавляется. Псевдоэлемент :after работает совместно со свойством content. 
+
+При добавлении :after к блочному элементу, значение свойства display может быть только: 
+block, inline, none, list-item. Все остальные значения будут трактоваться как block.
+При добавлении :after к строчному элементу, display ограничен значениями inline и none. 
+Все остальные будут восприниматься как inline.
+</td>
+			</tr>	
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">::-ms-clear {}</span></td>
+				<td class="Table_datacell">Задаёт стиль кнопки для очистки текстового поля. Исходно эта кнопка не видна, она появляется в правой части поля только при вводе текста.
+Только IE
+</td>
+			</tr>	
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">::-moz-focus-inner{}</span></td>
+				<td class="Table_datacell">Задаёт стиль внутренней части элемента
+Только FireFox
+</td>
+			</tr>	
+
+					</table>
+
+	<h2><span>Позиционирование</span></h2>
+<div>
+	<p>Устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице. Вспомогательные свойства left, right, top и bottom управляют положением элемента, а z-index управляет наложением друг на друга по оси Z.
+</p>
+</div>
+		<table class="Tabl_body">
+
+
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">Position: { }</span></td>
+				<td class="Table_datacell">
+					<span class="accent_text">static</span> - элемент позиционируется относительно родителя и соседних элементов
+<br><span class="accent_text">relative</span> - элемент позиционируется как static но можно двигать его относительно своего положения
+<br><span class="accent_text">absolute</span> - элемент позиционируется относительно ближайшего родителя с relative, absolute, fixed и sticky
+<br><span class="accent_text">fixed</span> - элемент позиционируется относительно окна браузера
+<br><span class="accent_text">sticky</span> - элемент позиционируется как static но когда верхняя граница элемента будет находиться на расстоянии, указанном в параметре top, от верхней границы окна браузера (либо указанном в параметре bottom от нижней), он останется в этом положении относительно окна до тех пор пока его нижняя граница не упрется в другой sticky элемент или конец родительского элемента
+<br><span class="accent_text">inherit</span> - берет значение от родителя 
+
+<br>Свойства:
+<span class="accent_text">top, bottom, left и right</span> - управляют положением элемента сверху снизу слева и справа.
+<br>Значения могут указываются в том числе в процентах и могут иметь отрицательные значения.
+<br>Работают с элементами, к которым применен один из параметров 
+position:relative, position:absolute, position:fixed и position:sticky (только top или bottom)
+</td>
+			</tr>	
+
+								<tr class="Table_row">
+				<td class="Table_datacell"><span class="accent_text">z-index</span></td>
+				<td class="Table_datacell">Управляет наложением друг на друга элементов с
+параметрами 
+<br><span class="accent_text">position:relative,</span> 
+<br><span class="accent_text">position:absolute,</span> 
+<br><span class="accent_text">position:fixed</span> по оси Z
+</td>
+			</tr>	
+</table>
+<br>
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+<br>
+</body>
+</html>

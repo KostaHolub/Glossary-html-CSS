@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<link rel="stylesheet" href="CSS/style.css">
+	<title>Таблицы в html 2</title>
+</head>
+<body>
+	<h1><span>Таблицы в html. </span><br><span>Атрибуты тега &lt;table&gt;</span></h1>
+
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+	<div>
+		<p>Тот факт, что таблицы применяются достаточно часто и не только для отображения табличных данных обязан не только их гибкости и универсальности, но и обилию атрибутов тегов <span class="tag">&lt;table&gt;</span>, <span class="tag">&lt;tr&gt;</span> и <span class="tag">&lt;td&gt;</span>. Далее перечислены некоторые атрибуты тега <span class="tag">&lt;table&gt;</span>, которые применяются наиболее часто.</p>
+	</div>
+	<h2><span>align</span></h2	>
+	<div>
+		<p>Задает выравнивание таблицы по краю окна браузера. Допустимые значения: <span class="value">left</span> — выравнивание таблицы по левому краю, <span class="value">center</span> — по центру и <span class="value">right</span> — по правому краю. Когда используются значения <span class="value">left</span> и <span class="value">right</span>, текст начинает обтекать таблицу сбоку и снизу.</p>
+	</div>
+	<h2><span>bgcolor</span></h2>
+	<div>
+		<p>Устанавливает цвет фона таблицы.</p>
+	</div>
+	<h2><span>border</span></h2>
+	<div>
+		<p>Устанавливает толщину границы в пикселах вокруг таблицы. При наличии этого атрибута также отображаются границы между ячеек.</p>
+	</div>
+	<h2><span>cellpadding</span></h2>
+	<div>
+		<p>Определяет расстояние между границей ячейки и ее содержимым. Этот атрибут добавляет пустое пространство к ячейке, увеличивая тем самым ее размеры. Без <span class="attribute">cellpadding</span> текст в таблице «налипает» на рамку, ухудшая тем самым его восприятие. Добавление же <span class="attribute">cellpadding</span> позволяет улучшить читабельность текста. При отсутствии границ особого значения этот атрибут не имеет, но может помочь, когда требуется установить пустой промежуток между ячейками.</p>
+	</div>
+	<h2>cellspacing</h2>
+	<div>
+		<p>Задает расстояние между внешними границами ячеек. Если установлен атрибут border, толщина границы принимается в расчет и входит в общее значение.</p>
+	</div>
+	<h2>cols</h2>
+	<div>
+		<p>Атрибут <span class="attribute">cols</span> указывает количество столбцов в таблице, помогая браузеру в подготовке к ее отображению. Без этого атрибута таблица будет показана только после того, как все ее содержимое будет загружено в браузер и проанализировано. Использование атрибута <span class="attribute">cols</span> позволяет несколько ускорить отображение содержимого таблицы.</p>
+	</div>
+	<h2>rules</h2>
+	<div><p>Сообщает браузеру, где отображать границы между ячейками. По умолчанию рамка рисуется вокруг каждой ячейки, образуя тем самым сетку. В дополнение можно указать отображать линии между колонками (значение <span class="value">cols</span>), строками (<span class="value">rows</span>) или группами (<span class="value">groups</span>), которые определяются наличием тегов <span class="tag">&lt;thead&gt;</span>, <span class="tag">&lt;tfoot&gt;</span>, <span class="tag">&lt;tbody&gt;</span>, <span class="tag">&lt;colgroup&gt;</span> или <span class="tag">&lt;col&gt;</span>. Толщина границы указывается с помощью атрибута <span class="attribute">border</span>.</p></div>
+	<h2>width</h2>
+	<div>
+		<p>Задает ширину таблицы. Если общая ширина содержимого превышает указанную ширину таблицы, то браузер будет пытаться «втиснуться» в заданные размеры за счет форматирования текста. В случае, когда это невозможно, например, в таблице находятся изображения, атрибут <span class="attribute">width</span> будет проигнорирован, и новая ширина таблицы будет вычислена на основе ее содержимого.</p>
+	</div>
+
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+<br>
+</body>
+</html>

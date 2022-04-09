@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<title>Таблицы в html</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<h1><span>Таблицы</span></h1>
+
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+	<div>
+		<p>Благодаря универсальности таблиц, большому числу параметров, управляющих их видом, таблицы надолго стали определенным стандартом для верстки веб-страниц. Таблица с невидимой границей представляет собой словно модульную сетку, в блоках которой удобно размещать элементы веб-страницы. Тем не менее, это не совсем правильный подход, ведь каждый объект HTML определен для своих собственных целей и если он используется не по назначению, причем повсеместно, это значит, что альтернатив нет. Так оно и было долгое время, пока на смену таблицам при верстке сайтов не пришли слои. Это не значит, что слои теперь используются сплошь и рядом, но тенденция уже наметилась четко — таблицы применяются для размещения табличных данных, а слои — для верстки и оформления.</p>
+	</div>
+	<h2><span>Создание таблицы</span></h2>
+	<div>
+		<p>Таблица состоит из строк и столбцов ячеек, которые могут содержать текст и рисунки. Обычно таблицы используются для упорядочения и представления данных, однако возможности таблиц этим не ограничиваются. C помощью таблиц удобно верстать макеты страниц, расположив нужным образом фрагменты текста и изображений.</p>
+		<p>Для добавления таблицы на веб-страницу используется тег <span class="tag">&lt;table&gt;</span>. Этот элемент служит контейнером для элементов, определяющих содержимое таблицы. Любая таблица состоит из строк и ячеек, которые задаются соответственно с помощью тегов <span class="tag">&lt;tr&gt;</span> и <span class="tag">&lt;td&gt;</span>. Таблица должна содержать хотя бы одну ячейку (пример 12.1). Допускается вместо тега <span class="tag">&lt;td&gt;</span> использовать тег <span class="tag">&lt;th&gt;</span>. Текст в ячейке, оформленной с помощью тега <span class="tag">&lt;th&gt;</span>, отображается браузером шрифтом жирного начертания и выравнивается по центру ячейки. В остальном, разницы между ячейками, созданными через теги <span class="tag">&lt;td&gt;</span> и <span class="tag">&lt;th&gt;</span> нет.</p>
+	</div>
+	<div class="tabl-shapka"><p>Пример 12.1. Создание таблицы</p></div>
+	<div class="sample">
+		<p><code>
+			&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML  4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+<br>&lt;html&gt;
+ <br>&lt;head&gt;
+ <br> &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+<br>  &lt;title&gt;Тег TABLE&lt;/title&gt;
+<br> &lt;/head&gt;
+<br> &lt;body&gt;
+ <br> &lt;table border="1" width="100%" cellpadding="5"&gt;
+ <br>  &lt;tr&gt;
+ <br>   &lt;th&gt;Ячейка 1&lt;/th&gt;
+ <br>   &lt;th&gt;Ячейка 1&lt;/th&gt;
+<br>    &lt;th&gt;Ячейка 2&lt;/th&gt;
+<br>   &lt;/tr&gt;
+<br>   &lt;tr&gt;
+ <br>   &lt;td&gt;Ячейка 3&lt;/td&gt;
+ <br>   &lt;td&gt;Ячейка 4&lt;/td&gt;
+<br>  &lt;/tr&gt;
+<br> &lt;/table&gt;
+<br> &lt;/body&gt;
+<br>&lt;/html&gt;
+		</code></p>
+	</div>
+<div>
+	<p>Порядок расположения ячеек и их вид показан на рис. 12.1.</p>
+	<p class="img">
+		<img src="Img/fig_1_12_1.png" alt="Рис. 12.1. Результат создания таблицы с четырьмя ячейками">
+	</p>
+	<p class="imgsigt">Рис. 12.1. Результат создания таблицы с четырьмя ячейками</p>
+</div>
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+<br>
+
+</body>
+</html>

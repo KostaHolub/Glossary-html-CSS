@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<title>Git шпаргалка по типовым задачам</title>
+</head>
+<body>
+	<h1><span>Git реализация типичных задач пользователя</span></h1>
+	
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+	<div>
+		<p>
+			<a href="https://git-scm.com/" target="_blank"><img class="Img-inside-text-left" src="Img/pngegg.png" alt="Git logo" width="100" height="100"></a>	
+			<a href="https://github.com/" target="_blank"><img class="Img-inside-text-right" src="Img/github-logo-5F384D0265-seeklogo.com.png" alt="GitHub logo" width="100" height="100"></a>
+			Git — это система, позволяющая
+			эффективно управлять историей исходного кода.
+			Любые изменения которые вносятся в проект
+			могут быть сохранены с помощью Git. Можно
+			вернуться к любым ранее сохраненным версиям.
+			Без Git пришлось бы создавать копии проекта, что
+			было бы проблемой при увеличении объема кода в
+			приложении.</p>
+	</div>
+
+
+	<h2><span>1. Нужно создать на локальном компе проект</span></h2>
+	<div>
+		<ol type="a">
+			<li class="li-otstup"> Создаем папку проекта, наполняем ее файлами (но это можно и потом)</li>
+			<li class="li-otstup">В терминале переходим в эту папку проекта командами <span class="bold-text">cd</span> и просмотра содержимого <span class="bold-text">dir</span></li>
+			<li class="li-otstup">Инициализируем репозиторий гит командой <span class="bold-text">git init</span> (при этом в исходной папке оздается скрытая папка .git, и в ней гит создает служебное  наполенение)</li>
+			<li class="li-otstup">Работаем, наполняем основную папку папку файлами</li>
+			<li class="li-otstup">В терминале, оставаясь в папке проекта, проверяем <span class="bold-text">git status</span>, добавляем файлы в гит <span class="bold-text">git add</span>. 
+             <br>Файлы можно исключить из контроля гита командой <span class="bold-text">git rm –cached &lt;file&gt;</span> если именно за ними не нужно следить. Также можно создать в корне проекта файл <span class="bold-text">.gitignore</span> – это текстовый файл, в нем пишутся имена файлов или папок, которые не нужно индексировать. Это позволяет в дальнейшем просто вводить <span class="bold-text">git add .</span>  т.о. добавлять все файлы в папке и автоматически не будет добавляться то, что проиписано в файле .gitignore
+			</li>
+			<li class="li-otstup">Если мы на этом этапе будем продолжать изменять наши рабочие файлы, то их потом в гите нужно будет также проапдейтить через  <span class="bold-text">git status</span>, <span class="bold-text">git add</span></li>
+			<li class="li-otstup">Делаем коммит (контрольную точку, к которой можно потом вернуться) командой <span class="bold-text">git commit -m "commit message"</span></li>
+			<li class="li-otstup">Работаем дальше, делаем новый коммит.</li>
+		</ol>
+	</div>
+
+	<h2><span>2. Нужно привязать проект к новому репозиторию гитхаб</span></h2>
+	<div>
+		<p class="img">
+			<img width="90%" src="Img/Git_repository_path.jpg" alt="Ссылка на путь к репозиторию находится здесь">
+		</p>
+		<p class="imgsigt">Ссылка на путь к репозиторию находится здесь</p>
+	</div>
+	<div>
+		<ol type="a">
+			<li class="li-otstup">Изначально нужно быть зарегистрированным на сайте гитхаб, имя пользователя и емейл нужны будут для привязки локального гита к гитхабу</li>
+			<li class="li-otstup">Создать на гитхабе новый репозиторий для своего проекта</li>
+			<li class="li-otstup">На локальной машине в терминале нужно ввести наши данные имени пользователя и емейл с гитхаба, это выполняется командами:
+				<br><span class="bold-text">git config --global user.name "new user"</span><br><span class="bold-text">git config --global user.email "test@mail.com"</span></li>
+			<li class="li-otstup">Привязать репозиторий на гитхаб к локальному, команда выглядит так:<br>
+				<span class="bold-text">git remote add origin https://.......</span>(адрес репозитория смотреть как показано на картинке)</li>
+			<li class="li-otstup">Загрузить файлы на репозиторий гитхаб команда <span class="bold-text">git push</span><br>
+				закачать проект из ветки master на локальном компе в ветку master на гитхабе команда сложнее:<span class="bold-text">git push -u origin master</span></li>
+		</ol>
+	</div>
+
+	<h2><span>3. Нужно скопировать с гитхаба проект себе на локальный компьютер</span></h2>
+	<div>
+		<ol type="a">
+			<li class="li-otstup">Создать папку проекта</li>
+			<li class="li-otstup">В терминале переходим в эту папку проекта командами <span class="bold-text">cd</span> и просмотра содержимого <span class="bold-text">dir</span></li>
+			<li class="li-otstup">Инициализируем скачивание с гитхаба гит командой: <span class="bold-text">git clone https://......</span> (адрес репозитория смотреть как показано на картинке выше)</li>
+		</ol>
+	</div>
+
+	<h2><span>4. Нужно скопировать с локального компьютера активный рабочий проект на гитхаб</span></h2>
+	<div>
+		<ol type="a">
+			<li class="li-otstup">Проверяем <span class="bold-text">git status</span></li>
+			<li class="li-otstup">Добавляем измененые файлы в гит: <span class="bold-text">git add .</span></li>
+			<li class="li-otstup">Заливаем на гитхаб командой <span class="bold-text">git push</span></li>
+		</ol>
+	</div>
+
+	<h2><span>5. Нужно обновить файлы активного рабочего проекта с гитхаба</span></h2>
+	<div>
+		<ol type="a">
+			<li class="li-otstup">Команда: <span class="bold-text">git pull</span></li>
+		</ol>
+	</div>
+
+	<h2><span>6. Работа с ветками версий проекта</span></h2>
+	<div>
+		<ol type="a">
+			<li class="li-otstup">Команда <span class="bold-text">git branch</span> показывает на какой ветке мы сейчас и какие ветки еще есть</li>
+			<li class="li-otstup">Чтобы разработать новую фичу или поучаствовать в проекте новым игроком стоит создать отдельную новую ветку. Для этого вводим <span class="bold-text">git branch branch-name</span></li>
+			<li class="li-otstup">Далее нам нужно переключиться на эту новую ветку. Команда <span class="bold-text">git checkout branch-name</span></li>
+			<li class="li-otstup">Можно одной командой создать ветку и переключиться на нее - <span class="bold-text">git checkout -b branch-name</span></li>
+			<li class="li-otstup">Когда мы переключились на новую ветку, работаем с файлами, создаем модифицируем и т.д </li>
+			<li class="li-otstup">В терминале, оставаясь в папке проекта, проверяем <span class="bold-text">git status</span>, добавляем файлы в гит <span class="bold-text">git add .</span></li>
+			<li class="li-otstup">Делаем коммит командой <span class="bold-text">git commit -m "commit message"</span></li>												
+		</ol>
+	</div>
+	<h2><span>7. Слияние веток гита</span></h2>
+	<div>
+		<ol type="a">
+			<li class="li-otstup">Нужно находиться в той ветке, в которую мы собираемся влить - посмотреть: <span class="bold-text">git branch</span></li>
+			<li class="li-otstup">Вливание происходит по команде <span class="bold-text">git merge branch-name</span> где branch-name это имя ветки, которую вливаем.</li>
+			<li class="li-otstup">После этого можно удалить вливаемую ветку, чтобы очистить проект от мусора – команда <span class="bold-text">git branch -D branch-name</span></li>
+		</ol>
+	</div>
+
+<div><span class="bold-text">Readme.md</span> – файл описания репозтория, которое показвается в например на гитхабе. Примерная конструция – текстовый файл, для того чтобы оформиь заголовок нужно постаивть в начале строки хештег <span class="bold-text">#</span></div>
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+<br>
+
+
+</body>
+</html>

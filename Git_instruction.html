@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<title>Git шпаргалка по использванию команд</title>
+</head>
+<body>
+	<h1><span>Git и GitHub наиболее распространенные команды</span></h1>
+	
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+	<div>
+		<p>
+			<a href="https://git-scm.com/" target="_blank"><img class="Img-inside-text-left" src="Img/pngegg.png" alt="Git logo" width="100" height="100"></a>	
+			Git — это система, позволяющая
+		эффективно управлять историей исходного кода.
+		Любые изменения которые вносятся в проект
+		могут быть сохранены с помощью Git. Можно
+		вернуться к любым ранее сохраненным версиям.
+		Без Git пришлось бы создавать копии проекта, что
+		было бы проблемой при увеличении объема кода в
+		приложении.</p>
+	</div>
+	<a href="https://github.com/" target="_blank"><img class="Img-inside-text-right" src="Img/github-logo-5F384D0265-seeklogo.com.png" alt="GitHub logo" width="100" height="100"></a>
+	<h2><span>Git и GitHub</span></h2>
+
+	<div>
+
+		<p><span class="bold-text">Git</span> — система контроля версий. Технология, которую можно скачать на компьютер.</p>
+	</div>
+	<div>
+		<p><span class="bold-text">Github</span> — сервис, который позволяет работать с Git проектами. Помимо Github существуют другие сервисы (например
+		Bitbucket, GitLab).
+		</p>
+	</div>
+
+	<h2><span>Как установить Git</span></h2>
+	<div>
+		<p>Это бесплатная технология и скачать ее можно тут:
+		<a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
+		Запускается через командную строку или терминал с команды git
+		</p>
+	</div>
+
+	<h2><span>Основные команды для работы в терминале</span></h2>
+
+	<div>
+		<p><span class="bold-text">git init</span></p>
+		<p>Позволяет проинициализировать репозиторий в текущей папке</p>
+	</div>
+	<div>
+		<p><span class="bold-text">git status</span></p>
+		<p>Показывает текущий статус</p>
+	</div>
+	<div>
+		<p><span class="bold-text">git add</span></p>
+		<p>Отслеживает изменения файлов</p>
+		<ul class="spisok">
+			<li><span class="bold-text">git add index.html</span> — добавляет index.html</li>
+			<li><span class="bold-text">git add .</span> — добавляет все файлы</li>
+		</ul>
+	</div>
+	<div>
+		<p><span class="bold-text">git commit</span></p>
+		<p>Сохраняет изменения в коммит</p>
+		<ul class="spisok">
+			<li><span class="bold-text">git commit -m 'commit message'</span> — создает коммит с сообщением</li>
+		</ul>		
+	</div>
+	<div>
+		<p><span class="bold-text">git branch</span></p>
+		<p>Работа с ветками в репозитории</p>
+		<ul class="spisok">
+			<li><span class="bold-text">git branch</span> — показывает список веток</li>
+			<li><span class="bold-text">git branch branch-name</span> — создает новую ветку branch-name</li>
+			<li><span class="bold-text">git branch -D branch-name</span> — удаляет ветку branch-name</li>
+		</ul>		
+	</div>
+	<div>
+		<p><span class="bold-text">git merge</span></p>
+		<p>Совмещает текущую ветку с выбранной</p>
+		<ul class="spisok">
+			<li><span class="bold-text">git merge branch-name</span> — совмещает текущую ветку с branch-name</li>
+		</ul>
+	</div>
+	<div>
+		<p><span class="bold-text">git config</span></p>
+		<p>Конфигурация и параметры git</p>
+		<ul class="spisok">
+			<li><span class="bold-text">git config --global user.name</span> — Показывает имя пользователя</li>
+			<li><span class="bold-text">git config --global user.name 'new user'</span> — Изменяет имя пользователя</li>
+			<li><span class="bold-text">git config --global user.email</span> — Показывает email пользователя</li>
+			<li><span class="bold-text">git config --global user.email 'test@mail.ru'</span> — Изменяет email пользователя</li>
+		</ul>		
+	</div>
+	<div>
+		<p><span class="bold-text">git push</span></p>
+		<p>Заливает текущие локальные коммиты в удаленный репозиторий</p>
+	</div>
+	<div>
+		<p><span class="bold-text">git pull</span></p>
+		<p>Забирает изменения с удаленного репозитория в локальный</p>
+	</div>
+	<div>
+		<p><span class="bold-text">git clone</span></p>
+		<p>Клонирует проект с удаленного репозитория</p>
+	</div>
+<div>Матерал взят из канала Владилена Минина. Git и GitHub для начинающих - <a href="https://www.youtube.com/watch?v=zZBiln_2FhM" target="_blank">https://www.youtube.com/watch?v=zZBiln_2FhM</a></div>
+<br>
+
+	<div>
+		<p><span class="bold-text">dir</span></p>
+		<p>Показать содержимое папки, в которой мы находимся сейчас (Системная операция)</p>
+	</div>
+	
+	<div>
+		<p><span class="bold-text">cd</span></p>
+		<p>Заменяет директорию на диске (Системная операция)</p>
+		<p>Например:</p>
+		<p>Перейти в папку внутри текущего каталога</p>
+		<div class="sample">
+		<p><code>
+C:\content-server>cd assets
+<br>C:\content-server\assets>
+		</code></p>
+		</div>		
+				<p>Перейти на одну папку вверх</p>
+		<div class="sample">
+		<p><code>
+C:\content-server\assets>cd ..
+<br>C:\content-server>
+		</code></p>
+		</div>		
+		<p>Перейти в папку на другом диске</p>
+		<div class="sample">
+		<p><code>
+c:\content-server>cd /d d:/
+<br>d:\>
+		</code></p>
+		<p>Чтобы просто изменить диск, введите c: или d:</p>
+		</div>		
+	</div>
+
+	<div>
+		<p><span class="bold-text">mkdir</span></p>
+		<p>Создает директорию на диске (Системная операция)</p>
+		<p>Создаём пустую папку code внутри папки html:</p>
+		<div class="sample">
+		<p><code>
+d:\html>mkdir code
+<br>d:\html>dir
+		</code></p>
+		</div>
+
+		<p>Создаём несколько пустых вложенных папок — для этого записываем их через косую черту.</p>
+		<div class="sample">
+		<p><code>
+d:\html>mkdir css\js
+<br>d:\html>dir
+ <br>Том в устройстве D имеет метку DATA
+ <br>Серийный номер тома: 0000-0000
+<br>
+ <br>Содержимое папки d:\html
+<br>
+<br>03.11.2020  19:23    &lt;DIR&gt;          .
+<br>03.11.2020  19:23    &lt;DIR&gt;           ..
+<br>03.11.2020  19:25    &lt;DIR&gt;           code
+<br>03.11.2020  19:29    &lt;DIR&gt;           css
+		</code></p>
+		</div>
+		<p>Создаётся папка css, внутри которой находится папка js. Чтобы проверить это, используем команду <span class="bold-text">tree</span>. Она показывает дерево папок.</p>
+
+	</div>
+	<div>
+		<p><span class="bold-text">cls</span></p>
+		<p>Очистить консоль (Системная операция)</p>
+	</div>
+<br>
+<div>Эта часть матерала взята с сайта <a  target="_blank" href="https://htmlacademy.ru/blog/boost/tools/windows-command-line">https://htmlacademy.ru/blog/boost/tools/windows-command-line</a></div>
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+<br>
+
+
+</body>
+</html>
