@@ -140,3 +140,24 @@ ol {
   padding-left: 40px;
 }
 ol li.li-otstup {padding-left: 10px;}
+
+.styled-list-ul {
+		font-size: 24px;}
+
+.styled-list-ul li{
+	margin: 0 0 10px 0;
+	padding: 0 0 0 30px;
+	background-color: lightgray;
+	position: relative;
+}
+.styled-list-ul li:before{
+	content: '';
+	background: url("../Img/ptichka.svg") 0 0 no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 8px;
+	left: 0px;
+}
+
+.styled-list-ul li:hover{color: gray;}
