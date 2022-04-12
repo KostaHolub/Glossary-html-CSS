@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<title>Git шпаргалка по использванию команд</title>
+</head>
+<body>
+	<h1><span>Применение <span class="bold-text">&lt;meta&gt;</span> в разделе Head</span></h1>
+	
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+	<div>
+		<p>
+		Мета-теги – это специальные элементы кода, 
+		через которые браузер и поисковые машины считывают информацию о сайте. 
+		Эти атрибуты не видны пользователям, не считаются очень важными для 
+		корректной работы ресурса. Теги просто описывают веб-страницу с помощью 
+		заголовка, дескриптора, ключевых фраз</p>
+		<p>
+			Элемент <span class="bold-text">&lt;meta&gt;</span> принимает как минимум четыре атрибута: content, http-equiv, name и scheme.
+		</p>
+	</div>
+
+
+
+
+	<h2><span>Основные теги влияющие на отображение страницы</span></h2>
+	<div>
+		<p>Кодировка страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta http-equiv="Content-type" content="text/html;charset=UTF-8"&gt;
+		</code></div>
+		<p>С появлением HTML5 можно использовать</p>
+		<div class="sample">
+		<code>
+		&lt;meta charset="UTF-8"&gt;
+		</code></div>		
+	</div>
+
+<div>
+		<p>Настройки адаптивности страницы</p>
+		<p>- для фиксированной ширины</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="viewport" content="width=1170"&gt;
+		</code></div>
+		<p>- для адаптивной ширины</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		</code></div>
+		<p>эта запись предусматривает что загрузка произойдет в том числе и в масштабе 100% (параметр initial-scale=1).</p>
+		<p>Отключает принудительную ссылку у номера телефона на iOS</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="format-detection" content="telephone=no"&gt;
+		</code></div>		
+	</div>	
+
+	<h2><span>SEO</span></h2>
+	<div>
+		<p>Краткое описание страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="description" content=" "&gt;
+		</code></div>
+		<p>Пишем не более 140 символов.</p>
+		<p>Ключевые слова страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="keywords" content=" "&gt;
+		</code></div>
+		<p>Пишем не более 20ти слов. Ключевые фразы разделяем запятой.</p>
+		<p>Управление доступом поисковых роботов к странице</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="robots" content=""&gt;
+		</code></div>
+		<p>По умолчанию страница индексируется поисковыми система, 
+		то есть этот мета тег дополнительно указывать не нужно. 
+		Но если задача стоит запретить либо ограничить индексацию, 
+		то существуют следующие значения:</p>
+		<p><span class="attribute">none</span> – запретить индексацию страницы полностью.</p>
+		<p><span class="attribute">noindex</span> – запретить индексацию содержимого страницы.</p>
+		<p><span class="attribute">nofollow</span> – игнорировать ссылки в пределах веб-страницы.</p>
+		<p><span class="attribute">noimageindex</span> - запретить индексацию присутствующих на странице изображений.</p>
+		<p><span class="attribute">noarchive</span> - запретить  вывод в результатах поиска ссылки «Сохраненная копия».</p>
+		<p><span class="attribute">nosnippet</span> - запретить  вывод в поисковой выдаче под названием страницы фрагмента текста, описывающего её содержание.</p>
+	</div>
+
+	<div>
+		<p>Значения указываются через запятую. Например:</p>
+		<p>Запрет индексации страницы полностью будет выглядеть так:</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="robots" content="noindex, nofollow"&gt;
+		</code></div>
+		<p>или так</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="robots" content="none"&gt;
+		</code></div>
+		<p>Запрет индексации ссылок и изображений на странице будет выглядеть так:</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="robots" content="noimageindex, nofollow"&gt;
+		</code></div>
+		<p>при этом текст страницы будет доступен к индексации.</p>		
+	</div>	
+
+<h2><span>Авторские и технические элементы</span></h2>
+	<div>
+		<p>Автор страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="Author" content="Пупкин Василий Петрович"&gt;
+		</code></div>
+		<p>Авторские права</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="Copyright" content="Зимина Татьяна Юрьевна"&gt;
+		</code></div>
+		<p>Адрес автора</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="Address" content="Луна, кратер №97"&gt;
+		</code></div>
+		<p>Редирект (перезагрузка) страницы. Задержка в секундах; url=Адрес сайта/страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta http-equiv="refresh" content="S; url=URL"&gt;
+		</code></div>
+		<p>, где:</p>
+		<p>S= Задержка в секундах</p>
+		<p>URL= Адрес сайта/страницы</p>
+	</div>
+
+<h2><span>Для социальных сетей</span></h2>
+	<div>
+		<p>Facebook</p>
+		<p>Что бы настроить вид нашей страницы в посте мы пишем следующие мета теги:</p>
+		<p>локализация сайта, для русскоязычного сайта ru_RU</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:locale" content="ru_RU"&gt;
+		</code></div>
+		<p>тип контента, по умолчанию используется article</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:type" content="article"&gt;
+		</code></div>
+		<p>заголовок страницы, который будет выводится в записи социальной сети</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:title" content="META теги"&gt;
+		</code></div>
+		<p>описание страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:description" content="Описание страницы про META теги"&gt;
+		</code></div>
+
+		<p>ссылка на изображение, которое будет публиковаться в записи</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:image" content="http://fls.guru/meta/img/bg.jpg"&gt;
+		</code></div>
+		<p>ссылка на текущую страницу</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:url" content="http://fls.guru/meta/ "&gt;
+		</code></div>
+		<p>название сайта</p>
+		<div class="sample">
+		<code>
+		&lt;meta property="og:site_name" content="Фрилансер по жизни"&gt;
+		</code></div>
+		<p>Проверить разметку можно в валидаторе от Facebook <a href="https://developers.facebook.com/tools/debug/sharing/" target="_blank">https://developers.facebook.com/tools/debug/sharing/</a></p>
+		<p>Подробнее о протоколе Open Graph можно почитать в официальной документации по ссылке в описании. <a target="_blank" href="https://ruogp.me/">https://ruogp.me/</a></p>
+		<br>
+		<p>Для создания Twitter Cards мета теги будут иметь другой вид:</p>
+		<p>Тип карты, по умолчанию используется summary</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="twitter:card" content="summary"&gt;
+		</code></div>
+		<p>Имя/логин автора</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="twitter:site" content="Жека"&gt;
+		</code></div>
+		<p>Название страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="twitter:title" content="META теги"&gt;
+		</code></div>
+		<p>Описание страницы</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="twitter:description" content="про META теги"&gt;
+		</code></div>
+		<p>Cсылка на изображение</p>
+		<div class="sample">
+		<code>
+		&lt;meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg"&gt;
+		</code></div>
+		<p>Проверяем результат в валидаторе твиттер</p>
+		<p><a href="https://cards-dev.twitter.com/validator" target="_blank">https://cards-dev.twitter.com/validator</a></p>												
+		<p>Подробнее о создании Twitter Cards можно почитать в официальной документации по ссылке в описании.</p>
+		<p><a target="_blank" href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started">https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started</a></p>
+	</div>
+
+
+
+<br>
+<div>Эта часть матерала взята с сайта Жени Андриканича - <a  target="_blank" href="https://fls.guru/">https://fls.guru/</a></div>
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+<br>
+
+
+</body>
+</html>
