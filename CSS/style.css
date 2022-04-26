@@ -50,8 +50,10 @@ html,body{
 
 h1	{margin: 0px 0px 4px 0px; font-size: 24px; font-weight: 700; color: #444; text-indent:5px;}
 h2	{margin: 14px 0px 3px 0px; font-size: 20px; font-weight: 700; color: #555;text-indent:5px;}
+.h3 {font-style: italic; margin: 30px 0px 10px 0px; font-size: 16px; font-weight: 700; color: #555;/*text-indent:5px;*/}
+/*code {font-size: 14px;}*/
 
-code {font-size: 14px;}
+/*визуализация упоминаемых в тексте тегов, значений и аттрибутов*/
 .tag {color: blue; font-weight: 600;}
 .value {color: green;}
 .attribute {color: red;}
@@ -118,11 +120,22 @@ img {
 }
 */
 
-.sample {background: rgb(200, 200, 180); font-family: monospace; margin: 0px 40px 10px 40px;}
+/*стиль образцов программного кода*/
+.sample {
+	background: rgb(200, 200, 180); 
+	font-family: monospace; 
+	margin: 0px 40px 10px 40px;
+}
 
-.img {margin: 2px 20px 2px 20px;}
-.imgsigt {text-align: center; color: #515151; font-style: italic; margin: 0px 20px 10px 20px;}
+/*стиль иллюстративных картинок с подписью*/
+.img {margin: 10px 40px 30px 40px;}
+.imgsigt {
+	text-align: center; 
+	color: #515151; 
+	font-style: italic; 
+	margin: 0px 20px 10px 20px;}
 
+/*стили таблиц*/
 .tabl-shapka {font-weight: 700; margin: 10px 0px 0px 50px;}
 
 .Tabl_body {border-collapse: collapse;
@@ -169,6 +182,7 @@ caption {
 td:hover {color: rgb(255,30,11);}
 td:active {font-weight: 900;}
 
+/*что-то раннее*/
 .symbol {font-weight: 600;}
 .box_rounded_shadow {
 padding: 10px;
@@ -183,6 +197,7 @@ height: 400px;
 	box-shadow: 0 0 10px #505050;
 }
 
+/*стандартный нумерованный список*/
 ol {
   padding-left: 40px;
 }
@@ -191,7 +206,7 @@ ol li.li-otstup {padding-left: 10px;}
 
 /*Маркированный список с птичкой вместо точки*/
 .styled-list-ul {
-		font-size: 24px;}
+		font-size: 16px;}
 
 .styled-list-ul li{
 	margin: 0 0 10px 0;
@@ -210,3 +225,9 @@ ol li.li-otstup {padding-left: 10px;}
 }
 
 .styled-list-ul li:hover{color: gray;}
+
+/*настройки для обычного стандартного текста*/
+.regular-text {
+	font-size: 14px;
+	margin-bottom: 10px;
+}

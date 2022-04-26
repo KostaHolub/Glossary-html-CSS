@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="CSS/style.css">
+	<title>Flex шпаргалка</title>
+</head>
+<body>
+
+	<h1><span><span class="bold-text">Flex</span> шпаргалка</span></h1>
+<!-- возврат на содержание всех шпаргалок -->	
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+
+<!-- Подготовка в html к введению флексбоксов -->	
+<div style="margin-bottom: 40px;"><h2>Построение структуры в html-файле</h2>
+<p class="regular-text"> для реализации выполнения работы модулей по технологии флекс, нужно создать определенную конструкцию блоков в html-файле, через которую можно будет управлять из CSS поведением страницы — должно быть миимум 4 уровня вложенных дивов:</p>	
+<ul class="styled-list-ul">
+	<li>родительский - div class="mother"</li>
+	<li>ряд - div class="flex-row"</li>
+	<li>элемент - div class="flex-element"</li>
+	<li>содержимое элемента - div class="flex-content"</li>
+</ul>
+</div>
+<p class="regular-text">Вот примерная конструкция флексбокса на 4 элемента в html. При этом двойное название класса "flex-element flex-element-1" сделано для того чтобы можно было обратиться как к общей группе элементов "flex-element", так и к конкретному элементу "flex-element-1".</p>
+<!-- <br> -->
+<div class="sample">
+		<p><code>
+			&lt;div class="mother"&gt;
+<br> &lt;div class="flex-row"&gt;
+<br> &lt;div class="flex-element flex-element-1"&gt;
+ &lt;div class="flex-content"&gt;1&lt;/div&gt;
+ &lt;/div&gt;
+<br> &lt;div class="flex-element flex-element-2"&gt;
+ &lt;div class="flex-content"&gt;2&lt;/div&gt;
+ &lt;/div&gt;
+<br> &lt;div class="flex-element flex-element-3"&gt;
+ &lt;div class="flex-content"&gt;3&lt;/div&gt;
+ &lt;/div&gt;
+<br> &lt;div class="flex-element flex-element-4"&gt;
+ &lt;div class="flex-content"&gt;4&lt;/div&gt;
+ &lt;/div&gt;
+ <br> &lt;/div&gt;
+ <br>  &lt;/div&gt;
+		</code></p>
+	</div>
+
+<!-- <div class="mother">
+	<div class="flex-row">
+		<div class="flex-element flex-element-1">
+			<div class="flex-content">1</div>
+		</div>
+		<div class="flex-element flex-element-2">
+			<div class="flex-content">2</div>
+		</div>
+		<div class="flex-element flex-element-3">
+			<div class="flex-content">3</div>
+		</div>
+		<div class="flex-element flex-element-4">
+			<div class="flex-content">4</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- описание применения флекс в CSS,  описание ккоманд -->
+<div style="margin-bottom: 40px;"><h2>Команды в CSS-файле</h2>
+	<p class="regular-text"> Для управления поведением страницы в CSS-файле предучсмотрены следующие команды:</p>	
+	<div>
+		<h3 class="h3">Свойства уровня флексконтейнера (класс row в иерархии дивов): <span class="bold-text">flex-row</span></h3>
+		<p class="sample"><code>. flex-row &lt;display: flex; flex-flow: row wrap; … &gt;</code></p>
+		<div>
+				<p>0. Без применения флекс блоки ведут себя классически — строятся по вертикали друг под другом и растягиваются по горизонтали на всю доступную ширину:</p>
+				<img class="img" src="Img/Flex_1.jpg" alt="Блокистроятся по вертикали страницы" width="500px">
+		</div>	
+		<div>
+				<p>1. На уровне «row» применяем <span class="bold-text">display:flex</span>
+               При этом блоки перестают строиться вертикльно один над другим и строятся в горизонтальный ряд друг за другом </p>
+				<img class="img" src="Img/Flex_2.jpg" alt="Блоки строятся по горизонтали страницы" width="500px">
+				<p class="regular-text">При этом флекс-элементы если не помещаются в поле родительского row объекта, то будут справа выползать за его край</p>
+				<img class="img" src="Img/Flex_3.jpg" alt="Блоки вылазят справа за край блока-родителя" width="500px">
+		</div>	
+		<div>
+				<p>2. На уровне row применив <span class="bold-text">display:inline-flex</span> получим следующее: размер контейнера родительского row объекта изменится так чтобы без зазоров обнять дочерние элементы -</p>
+				<img class="img" src="Img/Flex_4.jpg" alt="Блоки строятся" width="500px">
+				<p>Если при этом yна уровне выше, т.е. родителю всего флексконтейнера (диву с классом "mother" в примере выше), прописать свойство <span class="bold-text">text-align: center;</span>, то весь контенер выровняется посередине</p>
+				<img class="img" src="Img/Flex_5.jpg" alt="Блоки" width="500px">
+
+		</div>	
+		<div>
+				<p class="regular-text">3. Распределение элементов внутри контейнера по горизонтали (основной оси) row команда 
+					<span class="bold-text">justify-content:</span></p>
+				<p class="regular-text">
+					<span class="bold-text">justify-content: flex-start;</span> - элементы слева<br>
+					<span class="bold-text">justify-content: flex-end;</span> - элементы справа<br>
+					<span class="bold-text">justify-content: center;</span> - элементы по центру<br>
+					<span class="bold-text">justify-content: space-around;</span> - элементы распределены равномерно по ширине как офицеры в погонах<br>
+					<span class="bold-text">justify-content: space-between;</span> - элементы распределены равномерно по ширине с равными промежутками между ними</p>
+				<p class="regular-text">Это свойство настраивает не отступы типа марджина, а именно пространство между элементами (если динамичсеки менять ширину окна – то и пространство будет сужаться или расширяться)</p>
+				<img class="img" src="Img/Flex_6.jpg" alt="Блоки строятся" width="500px">
+		</div>	
+		<div>
+				<p class="regular-text">4  Распределение элементов внутри контейнера по вертикали (второй оси) row команда <span class="bold-text">align-items:</span></p>
+				<p class="regular-text">
+					<span class="bold-text">align-items: stretch;</span> - флексэлементы растягиваются по высоте на высоту контейнера (свойство по умолчанию)<br>
+					<span class="bold-text">align-items: center;</span> ;  - элементы по центру<br>
+					<span class="bold-text">align-items: flex-start;</span> -  элементы вверху<br>
+					<span class="bold-text">align-items: flex-end;</span> - элементы внизу<br>
+					<span class="bold-text">align-items: baseline;</span> - элементы выстраиваются по базовой линии (по "весу" элемента, как по осадке корабля)
+				</p>
+				<img class="img" src="Img/Flex_7.jpg" alt="Блоки строятся" width="500px">
+				<img class="img" src="Img/Flex_8.jpg" alt="Блоки строятся" width="500px">
+
+		</div>	
+		<div>
+				<p class="regular-text">5. Включение адаптивности блоков (чтобы они перестали выползать вправо за границы контейнера-родителя а опускались вниз на следующий уровень при достижении границы размера контейнера-родителя)</p>
+				<p class="regular-text">
+					<span class="bold-text">flex-wrap: wrap;</span> - элементы адаптируются (не вылазят за границу блока радителя)<br>
+					<span class="bold-text">flex-wrap: nowrap;</span> ;  - элементы не адаптируются (по умолчанию)<br>
+					<span class="bold-text">flex-wrap: wrap-reverse;</span> - элементы адаптируются в обратном порядке – было 1 2 3, станет при перестроении 3 2 1
+				</p>
+				<img class="img" src="Img/Flex_9.jpg" alt="Блоки строятся" width="500px">
+		</div>	
+		<div>
+				<p class="regular-text">6. Изменить основную ось нанизывания блоков можно в команде  <span class="bold-text">flex-direction</span></p>
+				<p class="regular-text">
+					<span class="bold-text">flex-direction: column;</span> - построить в колонку<br>
+					<span class="bold-text">flex-direction: column-reverse;</span> - построить в колонку зеркально (в обратном порядке)<br>
+					<span class="bold-text">flex-direction: row;</span> - построить в ряд<br>
+					<span class="bold-text">flex-direction: row-reverse;</span> - построить в ряд зеркально (в обратном порядке)
+				</p>
+				<p class="regular-text">Если поменять свойство с row на column то поменяются местами х и у, воображаемая главная и вспомогательная ось распространения элементов во флексмассиве. Это приводит к тому что <span class="bold-text">align-items:</span> начнет отвечать за размер по горизонтали, а <span class="bold-text">justify-content:</span> будет отвечать за размер по вертикали.</p>
+				<img class="img" src="Img/Flex_14.jpg" alt="Блоки строятся" width="500px">
+				<img class="img" src="Img/Flex_14a.jpg" alt="Блоки строятся" width="500px">
+				<img class="img" src="Img/Flex_14b.jpg" alt="Блоки строятся" width="500px">								
+		</div>	
+		<div>
+				<p class="regular-text">7. Можно описывать в команде <span class="bold-text">flex-flow</span> две команды сразу – <span class="bold-text">flex-direction</span> и <span class="bold-text">flex-wrap:</span></p>
+				<p class="sample"><code>.flex-container {<br>
+  					display: flex;<br>
+					flex-flow: row wrap;<br>
+					}
+				</code></p>
+		</div>	
+		<div>
+				<h3 class="h3">Свойства уровня флексэлемента (дивы с классом flex-element): класс "<span class="bold-text">flex-element</span>" для всей группы флексиуремых блоков, или через указание класс-модификатора для конкретного элемента (с классом "<span class="bold-text">flex-element-1</span>" в примере сверху).</h3>
+
+
+				<p>8. Распределение положения конкретного элемента, имеющего собственный уникальный идентификатор - например класс-модификатор или id, внутри контейнера по вертикали (второй оси) row команда <span class="bold-text">align-self</span></p>
+				<p class="regular-text">Все определения такие-же как и у команды <span class="bold-text">align-items:</span> stretch, center, flex-start, flex-end, baseline <br>
+					<span class="bold-text">align-self: center;</span> - элементы адаптируются (не вылазят за границу блока радителя)<br>
+					<span class="bold-text">align-self: flex-start;</span> ;  - элементы не адаптируются (по умолчанию)<br>
+					<span class="bold-text">falign-self: flex-end;</span> - элементы адаптируются в обратном порядке – было 1 2 3, станет при перестроении 3 2 1
+				</p>
+				<img class="img" src="Img/Flex_10.jpg" alt="Блоки строятся" width="500px">
+		</div>	
+		<div>
+				<p class="regular-text">9. Порядок следования блоков внутри контейнера можно на ходу изменить, присвоив каждому элементу в классе-модификаторе команду <span class="bold-text">order</span></p>
+				<p class="regular-text"><span class="bold-text">order: 2;</span>
+				- где 2 это номер следования блока в последовательности элементов.</p>
+				<p class="regular-text">Это нужно прописать для каждого элемента, относящегося к флексэлементам конкретного флексбокса.</p>
+				<img class="img" src="Img/Flex_11.jpg" alt="Блоки строятся" width="500px">
+		</div>	
+		<div>
+				<p class="regular-text">10. Базовая ширина флексэлемента регулируется командой <span class="bold-text">flex-basis:</span></p>
+				<p class="regular-text"><span class="bold-text">flex-basis: 100px;</span> - возможные значения <span class="bold-text">auto</span>, <span class="bold-text">размер в %</span> и <span class="bold-text">размер в px</span>. Это не эквивалент <span class="bold-text">width</span>, а базовое значение ширины, которую можно дополнительно менять еще и другими командами:</p>
+				<p class="regular-text">Кроме того существуют дополнительно такие команды:<br>
+					<span class="bold-text">flex-grow: 1;</span> - контролирует, сможет ли становиться элемент больше указанного базового размера в <span class="bold-text">flex-basis:</span>. Число, указывает, насколько этот элемент будет увеличиваться по сравнению с остальными гибкими элементами. <br>
+					<span class="bold-text">flex-shrink: 3;</span> - контролирует, сможет ли становиться элемент меньше указанного базового размера в <span class="bold-text">flex-basis:</span>. Число, указывает, насколько этот элемент будет уменьшаться по сравнению с остальными гибкими элементами.
+				</p>
+				<p class="regular-text">Значение по умолчанию – <span class="bold-text">0</span>. Если эта команда прописана в общем классе флексэлементов, то «<span class="bold-text">0</span>» - ничего не делать с размерами, а «<span class="bold-text">1</span>» - растянуть все элементы так, чтобы они занимали в сумме всю ширину флексконтейнера.</p>
+				<p class="regular-text">Есть общая команда, включающая в себя все три вышеописанные команды:<br>
+					<span class="bold-text">flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;</span>
+				</p>
+				<img class="img" src="Img/Flex_12.jpg" alt="Блокистроятся по вертикали страницы" width="500px">
+				<img class="img" src="Img/Flex_12a.jpg" alt="Блокистроятся по вертикали страницы" width="500px">
+				<img class="img" src="Img/Flex_12b.jpg" alt="Блокистроятся по вертикали страницы" width="500px">
+		</div>	
+	</div>
+</div>
+
+
+
+<div style="margin-bottom: 40px;"><h2>Заготовки решений по применению flex</h2>
+	<div>
+		<h3 class="h3">1 Чтобы у нас был всегда хедер вверху, а футер прижат к низу страницы можно сделать так:</h3>
+		<div>
+				<p class="regular-text">прописать в  контейнере row </p>
+				<p class="sample"><code>flex-direction: column; <br> justify-content: space-between;
+				</code></p>
+				<img class="img" src="Img/Flex_15.jpg" alt="Блоки" width="500px">
+				<p class="regular-text">или альтернативный вариант: для среднего блока в его класс-модификаторе</p>
+				<p class="sample"><code>flex: 1 1 auto;</code></p>
+				<img class="img" src="Img/Flex_15a.jpg" alt="Блоки" width="500px">
+		</div>
+		<div>	
+				<h3 class="h3">2 Чтобы сделать три колонки резиновые</h3>
+				<p class="sample"><code>
+					/* родитель */<br>
+					.block{<br>	
+					}<br>
+					/* flex-контейнер */<br>
+					.block__row{<br>
+					border: 10px solid #ece89d;display:flex;<br>
+					}<br>
+					/* flex-элемент */<br>
+					.block__element{<br>
+					border: 5px solid #5e5373;flex: 0 1 33.333%;<br>
+					}<br>
+					/* flex-элемент №1 */<br>
+					.block__element_1{<br>
+					}<br>
+					/* flex-элемент №2 */<br>
+					.block__element_2{<br>
+					}<br>
+					/* flex-элемент №3 */<br>
+					.block__element_3{<br>
+					}<br>
+					/* контент */<br>
+					.block__content{<br>
+					background-color: #18b5a4;/* плюс прочие стили для текста, отступы */<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_16_1.jpg" alt="Блоки" width="500px">
+		</div>	
+
+		<div>	
+				<h3 class="h3">3 Чтобы сделать четыре колонки в два ряда</h3>
+				<p class="sample"><code>
+					/* flex-контейнер */<br>
+					.block__row{<br>
+					border: display:flex; flex-wrap:wrap;<br>
+					}<br>
+					/* flex-элемент */<br>
+					.block__element{<br>
+					border: flex: 0 1 50%;<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_16_2.jpg" alt="Блоки" width="500px">
+		</div>	
+
+		<div>	
+				<h3 class="h3">4 Чтобы сделать три колонки Одна большая</h3>
+				<p class="sample"><code>
+					/* flex-контейнер */<br>
+					.block__row{<br>
+					border: display:flex; flex-wrap:wrap;<br>
+					}<br>
+					/* flex-элемент */<br>
+					.block__element{<br>
+					border: 5px solid #5e5373;<br>
+					}<br>
+					/* flex-элемент №1 */<br>
+					.block__element_1{<br>
+					flex: 0 1 100%;<br>
+					}<br>
+					/* flex-элемент №2 */<br>
+					.block__element_2{<br>
+					flex: 0 1 50%;<br>
+					}<br>
+					/* flex-элемент №3 */<br>
+					.block__element_3{<br>
+					flex: 0 1 50%;<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_16_32.jpg" alt="Блоки" width="500px">
+		</div>	
+		<div>	
+				<h3 class="h3">5 Чтобы сделать четыре колонки резина + отступы (10px)</h3>
+				<p class="sample"><code>
+					/* flex-контейнер */<br>
+					.block__row{<br>
+					display: flex;margin: 0px -5px;<br>
+					}<br>
+					/* flex-элемент */<br>
+					.block__element{<br>
+					padding: 0px 5px;flex: 0 1 25%;<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_16_4.jpg" alt="Блоки" width="500px">
+		</div>
+		<div>	
+				<h3 class="h3">6 Чтобы сделать две колонки сайдбар (200px)</h3>
+				<p class="sample"><code>
+					/* flex-контейнер */<br>
+					.block__row{<br>
+					border: display:flex;<br>
+					}<br>
+					/* flex-элемент №1 */<br>
+					.block__element_1{<br>
+					flex: 0 0 200px;<br>
+					}<br>
+					/* flex-элемент №2 */<br>
+					.block__element_2{<br>
+					flex: 1 1 auto;<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_16_5.jpg" alt="Блоки" width="500px">
+		</div>
+		<div>	
+				<h3 class="h3">7 Чтобы сделать три ряда второй элемент большой (описано в шпаргалке №1)</h3>
+				<p class="sample"><code>
+					/* flex-контейнер */<br>
+					.block__row{<br>
+					display:flex; flex-direction:column; height: 300px;<br>
+					}<br>
+					/* flex-элемент */<br>
+					.block__element{<br>
+					}<br>
+					/* flex-элемент №1 */<br>
+					.block__element_1{<br>
+					}<br>
+					/* flex-элемент №2 */<br>
+					.block__element_2{<br>
+					flex: 1 1 auto;<br>
+					}<br>
+					/* flex-элемент №3 */<br>
+					.block__element_3{<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_17_1.jpg" alt="Блоки" width="500px">
+		</div>
+		<div>	
+				<h3 class="h3">8 Чтобы сделать Три ряда выровнены по центру</h3>
+				<p class="sample"><code>
+					.block__row{<br>
+					display:flex; <br>
+					flex-direction:column; <br>
+					height: 300px; <br>
+					align-items: center;
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_17_2.jpg" alt="Блоки" width="500px">
+		</div>
+		<div>	
+				<h3 class="h3">9 Чтобы сделать три ряда вытянуты максимально по ширине</h3>
+				<p class="sample"><code>
+					.block__row{<br>
+					display:flex; <br>
+					flex-direction:column; <br>
+					height: 300px; <br>
+					justify-content: space-between;<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_17_3.jpg" alt="Блоки" width="500px">
+		</div>
+		<div>	
+				<h3 class="h3">10 Полное центрирование блока в контейнере</h3>
+				<p class="sample"><code>
+					.block__row{<br>
+ 					display:flex; <br>
+ 					justify-content:center; <br>
+ 					align-items:center; <br>
+ 					height: 300px;<br>
+					}<br>
+				</code></p>
+				<img class="img" src="Img/Flex_17_4.jpg" alt="Блоки" width="500px">
+		</div>
+	
+	</div>
+</div>
+
+
+
+<br>
+<div>Эта часть матерала взята с сайта Жени Андриканича - <a  target="_blank" href="https://fls.guru/">https://fls.guru/</a><br>
+		и с сайта <a href="www.w3schools.com">www.w3schools.com</a>
+</div>
+	<div>
+		<a href="index.html"><h2 style="color: red; text-align: right;">Содержание</h2></a>
+	</div>
+<br>
+
+
+</body>
+</html>
